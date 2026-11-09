@@ -1,0 +1,29 @@
+[package]
+name = "keystone"
+description = "Keystone — SSH & infrastructure manager"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "keystone_app"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+async-trait = "0.1.92"
+base64 = "0.23.1"
+dirs = "7.0.0"
+keystone-core = { version = "0.1.0", path = "../crates/keystone-core" }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sha2 = "0.11.1"
+tauri = "2"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-dialog = "2"
+tokio = { version = "1.54.1", features = ["full"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+uuid = { version = "1.29.1", features = ["v4"] }

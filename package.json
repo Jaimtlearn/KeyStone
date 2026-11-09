@@ -1,0 +1,18 @@
+{
+  "name": "keystone",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Keystone \u2014 SSH & infrastructure manager (Tauri 2 + Rust + React)",
+  "scripts": {
+    "setup": "npm --prefix ui install",
+    "dev": "tauri dev",
+    "dev:ui": "npm --prefix ui run dev",
+    "build": "tauri build",
+    "test": "cargo test -p keystone-core && npm --prefix ui run build",
+    "tauri": "tauri",
+    "build:ui": "npm --prefix ui run build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}

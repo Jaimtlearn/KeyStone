@@ -1,0 +1,53 @@
+# --- Rust ---
+/target
+**/*.rs.bk
+
+# --- Node / UI ---
+node_modules/
+ui/dist/
+*.tsbuildinfo
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Tauri ---
+src-tauri/gen/
+src-tauri/target/
+src-tauri/WixTools/
+
+# --- Keystone runtime data (never commit vaults, profiles or logs) ---
+*.ksv
+*.kspart
+*.ksbackup
+crash.log
+*.log
+
+# --- Secrets / local env ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# --- Test / tooling output ---
+coverage/
+playwright-report/
+test-results/
+
+# --- Editors / OS ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,9 +1,54 @@
-# Keystone
+<p align="center">
+  <img src="src-tauri/icons/128x128.png" width="96" alt="Keystone logo">
+</p>
 
-A desktop app for SSH and infrastructure management: a connection manager, an encrypted credential vault, jump-host chains, tunnels, and SFTP in one keyboard-driven app.
+<h1 align="center">Keystone</h1>
+
+<p align="center">
+  SSH and infrastructure management for the desktop: connections, an encrypted credential vault,<br>
+  jump-host chains, tunnels and SFTP in one keyboard-driven app.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Jaimtlearn/KeyStone/actions/workflows/build.yml"><img src="https://github.com/Jaimtlearn/KeyStone/actions/workflows/build.yml/badge.svg" alt="build"></a>
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-5b8cff" alt="platforms">
+  <img src="https://img.shields.io/badge/Tauri-2-24c8db?logo=tauri&logoColor=white" alt="Tauri 2">
+  <img src="https://img.shields.io/badge/Rust-core-b7410e?logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=black" alt="React 18">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/hosts.png" alt="Keystone host library" width="900">
+</p>
 
 **Stack:** Tauri 2 · Rust (russh, Argon2id, XChaCha20-Poly1305) · React 18 + TypeScript · xterm.js
 **Targets:** Windows 10/11 and Linux. macOS can be added without restructuring (see `docs/ARCHITECTURE.md`).
+
+## Screenshots
+
+> Screenshots show the built-in demo data, not real servers.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/terminal-jump.png" alt="Terminal through a jump chain"><br><sub><b>Terminal through a jump chain:</b> the route (Local → Production Bastion → Staging Jump → target) is shown on the pane</sub></td>
+    <td width="50%"><img src="docs/screenshots/terminal-split.png" alt="Split terminals"><br><sub><b>Tabs and split panes</b></sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/vault.png" alt="Credential vault"><br><sub><b>Encrypted vault:</b> SSH keys, databases, cloud and API credentials, with expiry and version history</sub></td>
+    <td><img src="docs/screenshots/tunnels.png" alt="Tunnels"><br><sub><b>Tunnels:</b> <code>-L</code>, <code>-R</code> and SOCKS5 <code>-D</code>, through bastions, with auto-reconnect</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/route-editor.png" alt="Jump host route editor"><br><sub><b>Route editor:</b> chain jump hosts, each with its own credentials</sub></td>
+    <td><img src="docs/screenshots/host-key.png" alt="Host key verification"><br><sub><b>Host-key verification</b> on every hop</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/command-palette.png" alt="Command palette"><br><sub><b>Ctrl+K command palette:</b> connect, open SFTP, run any action</sub></td>
+    <td><img src="docs/screenshots/sftp.png" alt="SFTP browser"><br><sub><b>Dual-pane SFTP</b> (light theme)</sub></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/themes.png" alt="Themes"><br><sub><b>8 built-in themes</b> plus a theme editor (Nord shown)</sub></td>
+  </tr>
+</table>
 
 ## What's in it
 
